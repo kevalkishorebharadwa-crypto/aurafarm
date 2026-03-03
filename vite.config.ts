@@ -8,12 +8,10 @@ import { miaodaDevPlugin } from "miaoda-sc-plugin";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// https://vite.dev/config/
 export default defineConfig({
-  // 1. ADD THIS LINE FOR GITHUB PAGES
-  // Replace 'your-repository-name' with the actual name of your project on GitHub
+  // REPLACE THIS with your repository name!
   base: 'aurafarm', 
-
+  
   plugins: [
     react(), 
     svgr({
@@ -30,7 +28,6 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
-  // 2. ADD THIS TO FIX BUILD ERRORS
   build: {
     outDir: 'dist',
   }
