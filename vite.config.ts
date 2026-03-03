@@ -10,9 +10,10 @@ const __dirname = dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
-  // ADD THIS LINE BELOW (Replace 'your-repo-name' with your actual GitHub repo name)
-  base: '/your-repo-name/', 
-  
+  // 1. ADD THIS LINE FOR GITHUB PAGES
+  // Replace 'your-repository-name' with the actual name of your project on GitHub
+  base: 'aurafarm', 
+
   plugins: [
     react(), 
     svgr({
@@ -29,4 +30,8 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
+  // 2. ADD THIS TO FIX BUILD ERRORS
+  build: {
+    outDir: 'dist',
+  }
 });
